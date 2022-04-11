@@ -1,23 +1,22 @@
 $('#factNameList').empty();
 $('#factDetail').empty();
-const facts = $.getJSON("/data/AlpacaFacts.json");
-console.log(facts);
 
 function get_fact_List(fact) {
     return `
-        <li class="list-group-item">
-            <button type="button" class="btn btn-light fact-btn">${fact.Title}</button>
-        </li>
+        <div class="row">
+            <button type="button" class="btn btn-success fact-btn">${fact.Title}</button>
+        </div>
+        <br>
     `
 }
 
 
-function showFacts(){
-    facts.responseJSON.forEach((alpFact)=>{
+$.getJSON("/data/AlpacaFacts.json", () => {
+}).done((data) => {
+    console.log(data);
+    data.forEach((alpFact) => {
         $('#factNameList').append(() => {
             return get_fact_List(alpFact);
         });
     })
-}
-
-showFacts();
+})
