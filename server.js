@@ -72,4 +72,7 @@ app.listen(3000, function() {
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/public/Home.html");
 })
+app.get('/alpaca-facts', function (req, res) {
+    res.sendFile(__dirname + "/public/Alpaca-Facts.html");
+})
 
