@@ -4,7 +4,7 @@ $('#factDetail').empty();
 function get_fact_List(fact) {
     return `
         <div class="row">
-            <button type="button" class="btn btn-success fact-btn">${fact.Title}</button>
+            <button type="button" class="btn btn-success fact-btn" value="${fact.Info}">${fact.Title}</button>
         </div>
         <br>
     `
@@ -19,4 +19,11 @@ $.getJSON("/data/AlpacaFacts.json", () => {
             return get_fact_List(alpFact);
         });
     })
+    $(".fact-btn").click(function () {
+        let factText = $(this).attr('value');
+        console.log(factText);
+        $('#factDetail').text(factText);
+    })
 })
+
+

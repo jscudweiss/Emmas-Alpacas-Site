@@ -5,6 +5,7 @@
     <title>Alpaca Facts</title>
 
     <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/Alpaca-Facts.css">
 
     <!--    Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -31,10 +32,16 @@
 <body class="container">
 <section id="AlpacaFacts">
     <div class="row">
-        <div class="col-3" id="factNameList">
+        <div class="col-3">
+            <div id="factNameList">
+                <div class="row">
+                    <button type="button" class="btn btn-success fact-btn" value="${fact.Info}">${fact.Title}</button>
+                </div>
+                <br>
+            </div>
         </div>
         <div class="col-9">
-            <p id="factDetail"></p>
+            <p id="factDetail">input details here</p>
         </div>
     </div>
 </section>

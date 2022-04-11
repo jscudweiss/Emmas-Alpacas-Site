@@ -1,0 +1,10 @@
+#factNameList{
+    height: 40rem;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fact-btn{
+    width: 80%;
+}
