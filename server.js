@@ -72,7 +72,26 @@ app.listen(3000, function() {
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/public/Home.html");
 })
-app.get('/alpaca-facts', function (req, res) {
+app.get('/About', function (req, res) {
+    res.sendFile(__dirname + "/public/About.html");
+})
+app.get('/Alpaca-Facts', function (req, res) {
     res.sendFile(__dirname + "/public/Alpaca-Facts.html");
 })
+app.get('/Calendar', function (req, res) {
+    res.sendFile(__dirname + "/public/Calendar.html");
+})
+app.get('/Contact', function (req, res) {
+    res.sendFile(__dirname + "/public/ContactUs.html");
+})
+app.get('/Gallery', function (req, res) {
+    res.sendFile(__dirname + "/public/Gallery.html");
+})
+app.get('/Newsletter', function (req, res) {
+    res.sendFile(__dirname + "/public/NewsLetter.html");
+})
+app.get('/Store', function (req, res) {
+    res.sendFile(__dirname + "/public/Store.html");
+})
+
 
