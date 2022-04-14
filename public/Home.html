@@ -23,15 +23,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=RocknRoll+One&display=swap" rel="stylesheet">
 
     <!--font awesome-->
-    <script src="https://kit.fontawesome.com/e5b5eed843.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6ebb9704bb.js" crossorigin="anonymous"></script>
     <script src="javascript/Home.js" defer></script>
     <script src="javascript/AllPages.js" defer></script>
 
 </head>
 
-<body class="container">
+<body  class="container">
 <section id="navBar">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light ">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Emma's Acres Alpacas</a>
             <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -41,7 +41,7 @@
                 <span> </span>
                 <span> </span>
             </a>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link" href="/Contact">Contact Us</a>
@@ -57,7 +57,26 @@
     </nav>
 </section>
 
+
 <br>
+
+<!--header-->
+<section id="header">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        Emma's Acres Alpacas
+                        <h1 style="font-weight: bold">
+                            Established 2002
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
 
 <section id="carousel">
 
@@ -72,21 +91,20 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-                <img src="photos/alpaca-pictures/alpaca_face.jpg" class="d-block w-100" alt="...">
+                <img src="photos/alpaca-pictures/alpaca_face.jpg" id="alpaca_face" width="300" height="700" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-
 
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="photos/alpaca-pictures/sunny_alpacas.jpg" class="d-block w-100" alt="...">
+                <img src="photos/alpaca-pictures/nina_with_alpaca.jpg" id="sunny_alpacas" width="300" height="700" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
 
 
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="photos/alpaca-pictures/3_alpacas.jpg" class="d-block w-100" alt="...">
+                <img src="photos/alpaca-pictures/3_alpacas.jpg" id="3_alpacas" width="300" height="700" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
 
                 </div>
@@ -104,3 +122,69 @@
         </button>
     </div>
 </section>
+
+
+<!--welcome were excited you're here-->
+
+<section id="welcome">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                  Welcome, and thanks for visiting our farm! We're excited you're here.
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--links section-->
+
+<section id="links" class="py-5 border-bottom">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 my-lg-4">
+                <h3 class="mt-md-3">Want to learn more about our farm?</h3>
+                <a id="link2" href="About.html">Click here!</a>
+
+            </div>
+
+            <div class="col-lg-4 my-lg-4">
+                <h3 class="mt-md-3">Want to subscribe to our newsletter?</h3>
+                <a id="link1" href="NewsLetter.html">Click here!</a>
+
+            </div>
+
+            <div class="col-lg-4 my-lg-4">
+                <h3 class="mt-md-3">Want to browse our gallery?</h3>
+                <a id="link3" href="Gallery.html">Click here!</a>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <p>© Copyright 2022 Emma's Acres Alpacas</p>
+    <div>
+        <a href="" class="me-4 text-reset">
+            <button type="button" id="facebook" class="btn btn-outline-dark"><i class="fab fa-facebook-square "></i>
+            </button>
+        </a>
+        <a href="" class="me-4 text-reset">
+            <button type="button" id="mail" class="btn btn-outline-dark">
+                <i class="fa-solid fa-envelope"></i> </button>
+        </a>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
