@@ -11,9 +11,9 @@ app.use(express.static(__dirname + "/public"));
 
 // =============================================================
 
-mongoose.connect('mongodb://localhost:27017/contactDB',
+mongoose.createConnection('mongodb://localhost:27017/contactDB',
     {useNewUrlParser: true}, function () {
-        console.log("db connection successful");
+        console.log("contactDB connection successful");
     });
 
 // contact: name, email, phone number, message
@@ -40,28 +40,37 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 // =============================================================
 
-// mongoose.connect('mongodb://localhost:27017/newsletterDB',
-//     {useNewUrlParser: true}, function () {
-//         console.log("db connection successful");
-//     });
-//
-// // newsletter: name, email, message (optional)
-// const newsletterSchema = {
-//     name: {
-//         type:String,
-//         required:[true, "Name cannot be empty"]
-//     },
-//     email: {
-//         type:String,
-//         required:[true, "Email cannot be empty"]
-//     },
-//     message: {
-//         type:String,
-//         required:false
-//     }
-// }
-//
-// const Newsletter = mongoose.model('Newsletter', newsletterSchema);
+mongoose.createConnection('mongodb://localhost:27018/newsletterDB',
+    {useNewUrlParser: true}, function () {
+        console.log("newsletterDB connection successful");
+    });
+
+// newsletter: name, email, message (optional)
+const newsletterSchema = {
+    name: {
+        type:String,
+        required:[true, "Name cannot be empty"]
+    },
+    email: {
+        type:String,
+        required:[true, "Email cannot be empty"]
+    },
+    message: {
+        type:String,
+        required:false
+    }
+}
+
+const Newsletter = mongoose.model('Newsletter', newsletterSchema);
+
+app.post("/save_newsletter", (req, res) => {
+    const newsletter = {
+        email:req.body.email,
+        message:req.body.message
+    }
+    console.log(req.body);
+    console.log(newsletter);
+})
 
 // =============================================================
 
@@ -69,7 +78,7 @@ app.listen(3000, function() {
     console.log("server started at 3000");
 })
 
-// Home Page
+// Page Navigation
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/public/Home.html");
 })
