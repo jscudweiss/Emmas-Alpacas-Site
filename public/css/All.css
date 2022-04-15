@@ -61,6 +61,52 @@
 }
 
 
+
+#header{
+    font-size:100px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+}
+
+#welcome{
+    font-size:50px;
+    font-family:"Candara", sans-serif;
+    /*font-weight:bold;*/
+}
+
+
+#footer{
+    height: 80px;
+    background-color: #859E6A;
+    padding-top: 10px;
+    padding-left:10px;
+    font-family: "Gill Sans MT", serif;
+
+}
+
+#facebook,#mail {
+
+}
+
+#links{
+    font-size:50px;
+    font-family:"Candara",  sans-serif;
+    font-weight: bold;
+    align-content: center;
+}
+
+#link1,#link2,#link3 {
+    font-size:30px;
+    font-family:"Candara", sans-serif;
+    font-weight: bold;
+    align-content:center;
+}
+
+#navBar{
+    color:#859E6A ;
+}
+
+
 #about_header{
     font-size:75px;
     font-family: "Niagara Engraved", serif;
@@ -80,7 +126,8 @@
 
 #info_header{
     font-size:50px;
-    font-family: "monospace", serif;
+    font-family: "Candara", sans-serif;
+    font-weight:bold;
 
 }
 
