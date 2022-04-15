@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color: var(--warm_grey);
+    background-color: #faf7f5;
 }
 
 .navbar-custom .navbar-brand,
@@ -72,6 +72,15 @@
 /* bottom line goes back to initial position and rotates back to 0 degrees */
 .navbar-toggler span:nth-child(3) {
     transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+#nav_font{
+    font-family: "Candara", sans-serif;
+}
+
+#nav_head{
+    font-family: "Candara", sans-serif;
+    /*font-weight: bold;*/
 }
 
 
