@@ -1,7 +1,27 @@
+.navbar-custom {
+    background-color: var(--warm_grey);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: var(--text_dark);
+}
+
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--text_warm);
+}
+/* change the color of active or hovered links */
+.navbar-custom .navbar-nav .active{
+    color: var(--text_light) !important;
+}
+
+
 /* Define the shape and color of the hamburger lines */
 .navbar-toggler span {
     display: block;
-    background-color: #e0e0e0;
+    background-color: var(--text_warm);
     height: 3px;
     width: 25px;
     margin-top: 5px;
@@ -10,7 +30,7 @@
     left: 0;
     opacity: 1;
     transition: all 0.2s ease-out;
-    transform-origin: center ;
+    transform-origin: center left;
 }
 
 
@@ -55,88 +75,6 @@
 }
 
 
-#header{
-    font-size:100px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-}
-
-#welcome{
-    font-size:50px;
-    font-family:"Niagara Engraved", serif;
-    font-weight:bold;
-}
 
 
-#footer{
-    height: 80px;
-    background-color: #859E6A;
-    padding-top: 10px;
-    padding-left:10px;
-    font-family: "Gill Sans MT", serif;
-
-}
-
-#facebook,#mail {
-
-}
-
-#links{
-    font-size:50px;
-    font-family:"Niagara Engraved",  serif;
-    font-weight: bold;
-    align-content: center;
-}
-
-#link1,#link2,#link3 {
-    font-size:30px;
-    font-family:"Miagara Engraved", serif;
-    font-weight: bold;
-    align-content:center;
-}
-
-#navBar{
-    color:#859E6A ;
-}
-
-
-#about_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-}
-
-#sunny_alpacas, #alpaca_face, #3_alpacas {
-    object-fit: cover;
-}
-
-#emma{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-#info_header{
-    font-size:50px;
-    font-family: "monospace", serif;
-
-}
-
-#info{
-    font-size: 20px;
-    font-family: "rockwell", serif;
-}
-
-#gallery_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-}
-
-#news_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-}
 

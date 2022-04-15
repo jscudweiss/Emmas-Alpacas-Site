@@ -1,5 +1,102 @@
+:root {
+    /* CSS HEX */
+    --background_warm: #fffcf5;
+    --warm_grey: #fffdfa;
+    --text_dark: #73706a;
+    --text_warm: #545048;
+    --text_light: #a8a296;
+
+}
+
+#bContainer {
+    background-color: var(--background_warm) !important;
+}
+
+.bg-custom{
+    background-color: var(--warm_grey);
+}
+
+#header{
+    font-size:100px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+}
+
+#welcome{
+    font-size:50px;
+    font-family:"Niagara Engraved", serif;
+    font-weight:bold;
+}
 
 
-body{
-    background: #fffcf5;
+#footer{
+    height: 80px;
+    background-color: #859E6A;
+    padding-top: 10px;
+    padding-left:10px;
+    font-family: "Gill Sans MT", serif;
+
+}
+
+#facebook,#mail {
+
+}
+
+#links{
+    font-size:50px;
+    font-family:"Niagara Engraved",  serif;
+    font-weight: bold;
+    align-content: center;
+}
+
+#link1,#link2,#link3 {
+    font-size:30px;
+    font-family:"Miagara Engraved", serif;
+    font-weight: bold;
+    align-content:center;
+}
+
+#navBar{
+    color:#859E6A ;
+}
+
+
+#about_header{
+    font-size:75px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+}
+
+#sunny_alpacas, #alpaca_face, #3_alpacas {
+    object-fit: cover;
+}
+
+#emma{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#info_header{
+    font-size:50px;
+    font-family: "monospace", serif;
+
+}
+
+#info{
+    font-size: 20px;
+    font-family: "rockwell", serif;
+}
+
+#gallery_header{
+    font-size:75px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+}
+
+#news_header{
+    font-size:75px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
 }
