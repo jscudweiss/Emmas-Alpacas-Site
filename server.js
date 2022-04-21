@@ -47,10 +47,10 @@ mongoose.createConnection('mongodb://localhost:27018/newsletterDB',
 
 // newsletter: name, email, message (optional)
 const newsletterSchema = {
-    name: {
-        type:String,
-        required:[true, "Name cannot be empty"]
-    },
+    // name: {
+    //     type:String,
+    //     required:[true, "Name cannot be empty"]
+    // },
     email: {
         type:String,
         required:[true, "Email cannot be empty"]
@@ -68,8 +68,9 @@ app.post("/save_newsletter", (req, res) => {
         email:req.body.email,
         message:req.body.message
     }
-    console.log(req.body);
     console.log(newsletter);
+    const newNewsletter = new Newsletter(newsletter);
+    newNewsletter.save();
 })
 
 // =============================================================

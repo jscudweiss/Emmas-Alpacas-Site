@@ -26,6 +26,7 @@
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/6ebb9704bb.js" crossorigin="anonymous"></script>
     <script src="javascript/AllPages.js" defer></script>
+    <script src="javascript/NewsLetter.js" defer></script>
 
 </head>
 <body id="bcontainer" >
@@ -81,13 +82,13 @@
 
 <div id="news_form" class="row">
     <div class="col-6" style="padding:80px;">
-        <form action="save_newsletter" method="post">
+        <form action="/save_newsletter" method="post">
 
             <div class="form-group" >
                 <p>Interested in being notified of special events? Enter your email here: </p>
                 <label for="email">Email address:</label>
                 <br>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
             </div>
 
             <br>
@@ -97,7 +98,7 @@
                 <p>And if you want, tell us how you found us! </p>
                 <label for="message">Enter your message:</label>
                 <br>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
             </div>
 
             <br>
