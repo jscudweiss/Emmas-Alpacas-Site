@@ -42,6 +42,16 @@
     /*font-weight:bold;*/
 }
 
+#our_gallery, #our_newsletter, #about_us {
+    font-size:50px;
+    font-family:"Candara",  sans-serif;
+    /*font-weight: bold;*/
+    /*align-content: center;*/
+}
+
+
+
+
 
 #links{
     font-size:50px;
