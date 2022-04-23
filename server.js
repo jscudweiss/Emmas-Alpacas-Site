@@ -39,7 +39,17 @@ const contactSchema = {
 const Contact = mongoose.model('Contact', contactSchema);
 
 app.post("/save_contact", (req, res) => {
-
+    Contact.create({
+        email:req.body.email,
+        message:req.body.message
+    }, function (err, contact) {
+        if (err) {
+            return console.error(err);
+        } else {
+            console.log("contact saved to database");
+            res.redirect("/Contact.html");
+        }
+    });
 })
 
 // =============================================================
@@ -66,7 +76,7 @@ app.post("/save_newsletter", (req, res) => {
         if (err) {
             return console.error(err);
         } else {
-            console.log(newsletter.email + " saved to database");
+            console.log("newsletter saved to database");
             res.redirect("/NewsLetter.html");
         }
     });
