@@ -9,48 +9,43 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
 
-// =============================================================
-
-mongoose.createConnection('mongodb://localhost:27017/contactDB',
+mongoose.createConnection('mongodb://localhost:27017/alpacaDB',
     {useNewUrlParser: true}, function () {
-        console.log("contactDB connection successful");
+        console.log("alpacaDB connection successful");
     });
-
-// contact: name, email, phone number, message
-const contactSchema = {
-    name: {
-        type:String,
-        required:[true, "Name cannot be empty"]
-    },
-    email: {
-        type:String,
-        required:[true, "Email cannot be empty"]
-    },
-    phone_number: {
-        type:String,
-        required:[true, "Phone Number cannot be empty"]
-    },
-    message: {
-        type:String,
-        required:[true, "Message cannot be empty"]
-    }
-}
-
-const Contact = mongoose.model('Contact', contactSchema);
 
 // =============================================================
 
-mongoose.createConnection('mongodb://localhost:27018/newsletterDB',
-    {useNewUrlParser: true}, function () {
-        console.log("newsletterDB connection successful");
-    });
+// // contact: name, email, phone number, message
+// const contactSchema = {
+//     name: {
+//         type:String,
+//         required:[true, "Name cannot be empty"]
+//     },
+//     email: {
+//         type:String,
+//         required:[true, "Email cannot be empty"]
+//     },
+//     phone_number: {
+//         type:String,
+//         required:[true, "Phone Number cannot be empty"]
+//     },
+//     message: {
+//         type:String,
+//         required:[true, "Message cannot be empty"]
+//     }
+// }
+//
+// const Contact = mongoose.model('Contact', contactSchema);
+//
+// app.post("/save_contact", (req, res) => {
+//
+// })
 
-// newsletter: name, email, message (optional)
+// =============================================================
+
+// newsletter: email, message (optional)
 const newsletterSchema = {
-    // name: {
-    //     type:String,
-    //     required:[true, "Name cannot be empty"]
-    // },
     email: {
         type:String,
         required:[true, "Email cannot be empty"]
@@ -69,8 +64,33 @@ app.post("/save_newsletter", (req, res) => {
         message:req.body.message
     }
     console.log(newsletter);
+
+
+
+
+    // const list = [];
+    // list.push(newsletter);
+    //
+    // Newsletter.insertMany(list, (err) => {
+    //     if (err) {
+    //         console.log("newsletter insertion failed");
+    //         console.log(err);
+    //     } else {
+    //         console.log("newsletter insertion successful");
+    //         res.redirect("/public/NewsLetter.html");
+    //     }
+    // })
+
     const newNewsletter = new Newsletter(newsletter);
-    newNewsletter.save();
+
+    newNewsletter.save(function (err, newsletter) {
+        if (err) {
+            return console.error(err);
+        } else {
+            console.log(newsletter.email + " saved to database");
+            res.redirect("/NewsLetter.html");
+        }
+    })
 })
 
 // =============================================================
