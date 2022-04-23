@@ -82,6 +82,9 @@ app.listen(3000, function() {
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/public/Home.html");
 })
+app.get('/Home', function (req, res) {
+    res.sendFile(__dirname + "/public/Home.html");
+})
 app.get('/About', function (req, res) {
     res.sendFile(__dirname + "/public/About.html");
 })
