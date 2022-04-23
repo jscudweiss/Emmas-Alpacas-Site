@@ -33,9 +33,11 @@ files = files.filter(function (file) {
     return file.substr(-5) === '.html';
 });
 
-files.forEach(function (file) {
+const pageList = [];
+const flen = files.length;
+
+for (let cur = 0; cur < len; cur++) {
     fs.readFile('public/' + file, 'utf-8', function (err, contents) {
-        const pageList = [];
         let $ = cheerio.load(contents);
         const nameLoaded = {
             'page_name': file.slice(0, -5),
@@ -59,36 +61,32 @@ files.forEach(function (file) {
     })
 });
 
-/*
-let factdata = [];
-fs.readFile(__dirname + "/public/data/Alpaca-Facts.json", 'utf-8',function (err, data) {
+fs.readFile(__dirname + "/public/data/Alpaca-Facts.json", 'utf-8', function (err, data) {
     if (err) {
         console.log(err)
     } else {
-        factdata.push(JSON.parse(data))
+        let factdata = JSON.parse(data)
+        const len = factdata.length
+        let factList = [];
+        for (let cur = 0; cur < len; cur++) {
+            const fdata = {
+                'page_name': "Alpaca-Facts",
+                'page_data': factdata[cur].Title,
+                'page_info_extra': factdata[cur].Info
+            }
+            factList.push(fdata)
+            if (cur === (len - 1)) {
+                Page.insertMany(factList, {}, (err) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("all data saved");
+                    }
+                });
+            }
+        }
     }
 })
 
-console.log(data);
 
-const len = factdata.length
-factList = [];
-for (let cur = 0; cur < len; cur++) {
-    const data = {
-        'page_name': "Alpaca-Facts",
-        'page_data': factdata[cur].Title,
-        'page_info_extra': factdata[cur].Info
-    }
-    factList.push(data)
-    console.log(cur + " : " + len)
-    if (cur === (len - 1)) {
-        Page.insertMany(data, {}, (err) => {
-            console.log(data);
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("all data saved");
-            }
-        });
-    }
-}*/
+
