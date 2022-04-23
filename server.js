@@ -84,6 +84,10 @@ app.post("/save_newsletter", (req, res) => {
     });
 })
 
+app.post("/search", (req, res)=>{
+
+})
+
 // =============================================================
 
 app.listen(3000, function() {
