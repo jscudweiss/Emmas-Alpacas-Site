@@ -40,14 +40,16 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 app.post("/save_contact", (req, res) => {
     Contact.create({
+        name:req.body.name,
         email:req.body.email,
+        phone_number:req.body.phone_number,
         message:req.body.message
     }, function (err, contact) {
         if (err) {
             return console.error(err);
         } else {
             console.log("contact saved to database");
-            res.redirect("/Contact.html");
+            res.redirect("/ContactUs.html");
         }
     });
 })

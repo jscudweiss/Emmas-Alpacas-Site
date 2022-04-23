@@ -82,12 +82,12 @@
 
 <div id="news_form" class="row searchable">
     <div class="col-6" style="padding:80px;">
-        <form action="save_newsletter" method="post">
+        <form action="save_contact" method="post">
 
             <div class="form-group" >
                 <label for="Name">Name:</label>
                 <br>
-                <input type="name" class="form-control" id="Name" placeholder="Name">
+                <input type="name" class="form-control" name="name" id="name" placeholder="Name">
             </div>
 
             <br>
@@ -96,16 +96,16 @@
             <div class="form-group">
                 <label for="email">Email:</label>
                 <br>
-                <input type="email" class=form-control id="email" placeholder="name@example.com" >
+                <input type="email" class=form-control name="email" id="email" placeholder="name@example.com" >
             </div>
 
             <br>
             <br>
 
             <div class="form-group" >
-                <label for="number">Phone Number:</label>
+                <label for="phone_number">Phone Number:</label>
                 <br>
-                <input type="number" class="form-control" id="number" placeholder="xxx-xxx-xxxx">
+                <input type="number" class="form-control" name="phone_number" id="phone_number" placeholder="xxx-xxx-xxxx">
             </div>
 
             <br>
@@ -114,7 +114,7 @@
             <div class="form-group">
                 <label for="message">Enter your message:</label>
                 <br>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="3"></textarea>
             </div>
 
             <br>
