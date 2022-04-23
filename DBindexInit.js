@@ -37,7 +37,7 @@ files.forEach(function (file) {
         let $ = cheerio.load(contents);
         $('.searchable').each(function (i, elm) {
             const pagedat = {
-                'page_name': file.slice(0, -5),
+                'page_name': file.slice(1, -5),
                 'page_data': $(this).text()
             }
             pageList.push(pagedat);
