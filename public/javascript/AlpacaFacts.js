@@ -11,7 +11,7 @@ function get_fact_List(fact) {
 }
 
 
-$.getJSON("/data/AlpacaFacts.json", () => {
+$.getJSON("/data/Alpaca-Facts.json", () => {
 }).done((data) => {
     console.log(data);
     data.forEach((alpFact) => {
