@@ -4,7 +4,7 @@ $('#factDetail').empty();
 function get_fact_List(fact) {
     return `
         <div class="row">
-            <button type="button" class="btn btn-success fact-btn" value="${fact.Info}, ${fact.url}">${fact.Title}</button>
+            <button type="button" class="btn btn-success fact-btn" value="${fact.Info} ">${fact.Title}</button>
         </div>
         <br>
     `
