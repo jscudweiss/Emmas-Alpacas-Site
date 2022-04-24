@@ -49,7 +49,7 @@ app.post("/save_contact", (req, res) => {
             return console.error(err);
         } else {
             console.log("contact saved to database");
-            res.redirect("/ContactUs.html");
+            res.redirect("/ContactUs.html?thank="+true);
         }
     });
 })
@@ -79,7 +79,7 @@ app.post("/save_newsletter", (req, res) => {
             return console.error(err);
         } else {
             console.log("newsletter saved to database");
-            res.redirect("/NewsLetter.html");
+            res.redirect("/NewsLetter.html?thank="+true);
         }
     });
 })
