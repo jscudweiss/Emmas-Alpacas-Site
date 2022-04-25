@@ -18,7 +18,7 @@ $('#search').on('keyup', function () {
             $('#searchResults').empty();
             searchData = data.data;
             searchData.sort((a, b) => {
-                return b.count - a.count;
+                return (b.count - a.count) || a._id.localeCompare(b._id);
             })
             searchData.forEach((input) => {
                 let shownText = "";
