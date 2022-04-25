@@ -11,7 +11,7 @@ function hideSearch() {
 
 let searchData = [];
 
-function searchAndSet(){
+function searchAndSet() {
     let sk = $("#search").val().toLowerCase();
     $.get("/get_search_results", {
         search_key: sk,
@@ -21,7 +21,7 @@ function searchAndSet(){
             switch (sk) {
                 case "":
                     searchData.sort((a, b) => {
-                        return a._id.localeCompare(b._id) || (b.count - a.count) ;
+                        return a._id.localeCompare(b._id) || (b.count - a.count);
                     })
                     break;
                 default:
@@ -32,14 +32,14 @@ function searchAndSet(){
             console.log(searchData)
             switch (searchData.length) {
                 case 0:
-                    searchData = [{_id:"NA", count:0}]
+                    searchData = [{_id: "NA", count: 0}]
                     break;
             }
 
             searchData.forEach((input) => {
                 let shownText = "";
                 let link = "";
-                switch (input._id){
+                switch (input._id) {
                     case "NA":
                         shownText = "NO RESULTS"
                         link = "#"
@@ -55,7 +55,8 @@ function searchAndSet(){
                 let includes = !(shownText.includes(sk.toUpperCase()))
                 switch (includes) {
                     case true:
-                        shownText = shownText+ " : " + sk;
+                        shownText = shownText + " : " + sk;
+                        link = link + "search?=" + sk;
                         break;
                 }
                 $('#searchResults').append(`
@@ -70,22 +71,28 @@ $('#search').on('keyup', function () {
     searchAndSet();
 })
 
-document.getElementById("search").addEventListener("search", function(event) {
+document.getElementById("search").addEventListener("search", function (event) {
     searchAndSet();
 });
 
 
-$('#search_form').on('submit', function (){
-    console.log("/" + searchData[0]._id)
-    switch (searchData[0]._id){
+$('#search_form').on('submit', function () {
+    let sk = $("#search").val().toLowerCase();
+    let includes = !(shownText.includes(sk.toUpperCase()))
+    let hasout = ""
+    switch (includes){
+        case true:
+            hasout= "?search=" + sk;
+    }
+    switch (searchData[0]._id) {
         case "NA":
-            location.href= "#";
+            location.href = "#" + hasout;
             break;
         case "contactus":
-            location.href= "/contact";
+            location.href = "/contact" + hasout;
             break;
         default:
-            location.href= "/" + searchData[0]._id;
+            location.href = "/" + searchData[0]._id + hasout;
     }
 
     return false;
