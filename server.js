@@ -122,7 +122,4 @@ app.get('/Newsletter', function (req, res) {
 app.get('/Store', function (req, res) {
     res.sendFile(__dirname + "/public/Store.html");
 })
-app.get('/NavTest', function (req, res) {
-    res.sendFile(__dirname + "/public/NavTester.html");
-})
 
