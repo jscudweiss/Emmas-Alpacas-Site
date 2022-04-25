@@ -41,7 +41,7 @@ function searchAndSet(){
                 let link = "";
                 switch (input._id){
                     case "NA":
-                        shownText = "NO RESULT"
+                        shownText = "NO RESULTS"
                         link = "#"
                         break;
                     case "contactus":
