@@ -11,8 +11,9 @@ function hideSearch() {
 let searchData = [];
 
 $('#search').on('keyup', function () {
+    let sk = $("#search").val().toLowerCase();
     $.get("/get_search_results", {
-        search_key: $("#search").val().toLowerCase(),
+        search_key: sk,
     }).done((data) => {
             $('#searchResults').empty();
             searchData = data.data;
@@ -24,15 +25,18 @@ $('#search').on('keyup', function () {
                 let link = "";
                 switch (input._id){
                     case "contactus":
-                        shownText = "Contact Us"
+                        shownText = "CONTACT US"
                         link = "contact"
                         break;
                     default:
-                        shownText = input._id
+                        shownText = input._id.toUpperCase()
                         link = input._id
                 }
+                if (!(shownText.includes(sk.toUpperCase()))){
+                    shownText = shownText+ " : " + sk;
+                }
                 $('#searchResults').append(`
-                <a href="/${link}">${shownText.toUpperCase()}</a>
+                <a href="/${link}">${shownText}</a>
                 `);
             })
         }
