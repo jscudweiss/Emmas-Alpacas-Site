@@ -29,6 +29,10 @@
     <!--    jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!--    Google jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     <script src="javascript/AllPages.js" defer></script>
     <script src="javascript/NewsLetter.js" defer></script>
 
@@ -58,12 +62,14 @@
                     <a class="nav-link" href="/Alpaca-Facts">Alpaca Facts</a>
                     <a class="nav-link" href="/About">About</a>
                 </div>
-                <form class="form-inline my-2 my-lg-0 ms-auto">
-                    <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search" aria-label="Search"
-                           id="search" name="search">
-                    <datalist id="searchResults">
-                        <option value="testval">
-                    </datalist>
+                <form class="form-inline my-2 my-lg-0 ms-auto" id="search_form">
+                    <div class="dropdown" id="searchbox">
+                        <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search"
+                               aria-label="Search"
+                               id="search" name="search" onfocus="showSearch()" onblur="hideSearch()">
+                        <div class="dropdown-content" id="searchResults">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

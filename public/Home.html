@@ -26,19 +26,26 @@
 
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/6ebb9704bb.js" crossorigin="anonymous"></script>
-    <script src="javascript/Home.js" defer></script>
+
+    <!--    Google jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     <script src="javascript/AllPages.js" defer></script>
+    <script src="javascript/Home.js" defer></script>
 
 </head>
 
 <body id="bcontainer" class="container">
 
-<section id="navBar" >
+<section id="navBar">
     <nav class="navbar navbar-expand-sm navbar-custom">
         <div class="container-fluid">
             <img src="photos/merchandise%20pictures/emma's%20logo%202.png" width="100" height="100" id="logo" alt="...">
             <a id="nav_head" class="navbar-brand" href="/" style="padding-left: 20px;">Emma's Acres Alpacas</a>
-            <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+               aria-label="Toggle navigation">
                 <span> </span>
                 <span> </span>
                 <span> </span>
@@ -52,14 +59,16 @@
                     <a class="nav-link" href="/Calendar">Calendar</a>
                     <a class="nav-link" href="/Newsletter">Newsletter</a>
                     <a class="nav-link" href="/Alpaca-facts">Alpaca Facts</a>
-                    <a class="nav-link"href="/About">About</a>
+                    <a class="nav-link" href="/About">About</a>
                 </div>
-                <form class="form-inline my-2 my-lg-0 ms-auto">
-                    <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search" aria-label="Search"
-                           id="search" name="search">
-                    <datalist id="searchResults">
-                        <option value="testval">
-                    </datalist>
+                <form class="form-inline my-2 my-lg-0 ms-auto" id="search_form">
+                    <div class="dropdown" id="searchbox">
+                        <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search"
+                               aria-label="Search"
+                               id="search" name="search" onfocus="showSearch()" onblur="hideSearch()">
+                        <div class="dropdown-content" id="searchResults">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -68,19 +77,19 @@
 
 <!--header-->
 <section id="header">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-<!--                <img src="photos/merchandise%20pictures/emma's%20logo%202.png" width="250" height="40" id="logo" alt="...">-->
-                <div class="col-lg-10">
-                    <div class="text-center my-5 searchable">
-                        Emma's Acres Alpacas
-                        <h1 style="font-weight: bold">
-                            Established 2002
-                        </h1>
-                    </div>
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <!--                <img src="photos/merchandise%20pictures/emma's%20logo%202.png" width="250" height="40" id="logo" alt="...">-->
+            <div class="col-lg-10">
+                <div class="text-center my-5 searchable">
+                    Emma's Acres Alpacas
+                    <h1 style="font-weight: bold">
+                        Established 2002
+                    </h1>
                 </div>
             </div>
         </div>
+    </div>
 
 </section>
 
@@ -98,20 +107,23 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-                <img src="photos/alpaca-pictures/cropped%20alpacas%20-%20homepage.jpg" id="alpaca_face" width="300%" height="700%" class="d-block w-100" alt="...">
+                <img src="photos/alpaca-pictures/cropped%20alpacas%20-%20homepage.jpg" id="alpaca_face" width="300%"
+                     height="700%" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
 
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="photos/alpaca-pictures/nina-homepagecrop%231.jpg" id="sunny_alpacas" width="15%" height="35%" class="d-block w-100" alt="...">
+                <img src="photos/alpaca-pictures/nina-homepagecrop%231.jpg" id="sunny_alpacas" width="15%" height="35%"
+                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
 
 
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="photos/alpaca-pictures/3_alpacas_crop.jpg" id="3_alpacas" width="300%" height="700%" class="d-block w-100" alt="...">
+                <img src="photos/alpaca-pictures/3_alpacas_crop.jpg" id="3_alpacas" width="300%" height="700%"
+                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
 
                 </div>
@@ -138,9 +150,9 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-7">
                 <div class="text-center my-5 searchable">
-                  Welcome, and thanks for visiting our farm!
+                    Welcome, and thanks for visiting our farm!
                     <br>
-<!--                    <br>-->
+                    <!--                    <br>-->
                     We're excited you're here.
 
                 </div>
@@ -150,7 +162,6 @@
 </section>
 
 
-
 <!--links section-->
 
 <br>
@@ -158,9 +169,9 @@
 
 <div id="about_us" class="row">
     <div class="col-6 searchable" style="padding:80px;">
-      <h2>
-          About Our Farm
-      </h2>
+        <h2>
+            About Our Farm
+        </h2>
 
         <h5>
             Founded in 2002, our farm is home to more than 15 alpacas.
@@ -169,8 +180,8 @@
         <a href="About.html" class="btn btn-success">About</a>
 
 
-            <br>
-            <br>
+        <br>
+        <br>
 
     </div>
 
@@ -182,8 +193,6 @@
 
     </div>
 </div>
-
-
 
 
 <hr color="#B9A3FF">
@@ -202,7 +211,6 @@
 
 
     </div>
-
 
 
     <br>
@@ -232,7 +240,6 @@
     </div>
 
 
-
     <br>
     <br>
 
@@ -244,7 +251,6 @@
 
 
 <hr color="#B9A3FF">
-
 
 
 <!--<div id="card" class="row">-->
@@ -278,11 +284,6 @@
 <!--</div>-->
 
 
-
-
-
-
-
 <!--<section id="links" class="py-5 border-bottom">-->
 
 <!--    <div class="container">-->
@@ -311,7 +312,6 @@
 
 
 <!--</section>-->
-
 
 
 <!--information-->
@@ -351,7 +351,7 @@
 
                                 </div>
                             </div>
-<!--                            <img src="photos/alpaca-pictures/emma.jpg" id="emma">-->
+                            <!--                            <img src="photos/alpaca-pictures/emma.jpg" id="emma">-->
                         </div>
                     </div>
                 </div>
@@ -362,9 +362,6 @@
     <br>
     <br>
 </section>
-
-
-
 
 
 <!--footer-->
@@ -397,7 +394,6 @@
     </footer>
     <!-- Footer -->
 </div>
-
 
 
 </body>

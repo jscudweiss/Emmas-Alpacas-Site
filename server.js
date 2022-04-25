@@ -28,18 +28,8 @@ const pageSchema = new Schema({
     page_info_extra: {
         type: String
     }
-})
-
-pageSchema.index({
-    page_name: 'text',
-    page_data: 'text',
-    page_info_extra: 'text'
 }, {
-    name: 'search_Index', weights: {
-        page_name: 100,
-        page_data: 5,
-        page_info_extra: 1
-    }, default_language: 'none'
+    collation: {locale: 'en_US', strength: 1}
 })
 
 const Page = mongoose.model('Page', pageSchema);
@@ -153,25 +143,40 @@ app.get('/Store', function (req, res) {
     res.sendFile(__dirname + "/public/Store.html");
 })
 app.get("/get_search_results", (req, res) => {
-    const sk = req.query.search_key.toString();
+    const sk = req.query.search_key;
     Page.aggregate([
             {
-                "$match": {
-                    "$text": {
-                        "$regex": sk,
+                $facet: {
+                    name_match: [
+                        {$match: {page_name: {$regex: sk}}},
+                        {$group: {_id: "$page_name", count: {$sum: 100}}}
+                    ],
+                    data_match: [
+                        {$match: {page_data: {$regex: sk}}},
+                        {$group: {_id: "$page_name", count: {$sum: 5}}}
+                    ],
+                    extra_match: [
+                        {$match: {page_info_extra: {$regex: sk}}},
+                        {$group: {_id: "$page_name", count: {$sum: 1}}}
+                    ],
+                }
+            }, {
+                $project: {
+                    all: {
+                        $concatArrays: ["$name_match", "$data_match", "$extra_match"]
                     }
                 }
             }, {
-                "$addFields": {Score: {$meta: "textScore"}}
+                $unwind: "$all"
             },
             {
-                "$group": {
-                    _id: "$page_name",
-                    score: {$sum: "$Score"},
-                    count: {$sum: 1}
+                $group: {
+                    "_id": "$all._id",
+                    "count": {$sum: "$all.count"}
                 }
             }
-        ], function (err, data) {
+        ],
+        function (err, data) {
             if (err) {
                 console.log("err" + err);
                 res.send({
@@ -187,7 +192,7 @@ app.get("/get_search_results", (req, res) => {
                 })
             }
         }
-    )
+    ).collation({locale: 'en', strength: 1})
 })
 ;
 

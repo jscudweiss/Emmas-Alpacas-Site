@@ -3,17 +3,33 @@ function showSearch() {
 }
 
 function hideSearch() {
-    $('#searchResults').removeClass("show");
+    if (!($('#searchResults:hover').length)) {
+        $('#searchResults').removeClass("show");
+    }
 }
+
+let searchData = [];
 
 $('#search').on('keyup', function () {
     $.get("/get_search_results", {
-        search_key: $("#search").val(),
+        search_key: $("#search").val().toLowerCase(),
     }).done((data) => {
-            /*$('#searchResults').empty();*/
-            dataArr = data.data;
-            console.log(dataArr);
+            $('#searchResults').empty();
+            searchData = data.data;
+            searchData.sort((a, b) => {
+                return b.count - a.count;
+            })
+            searchData.forEach((input) => {
+                $('#searchResults').append(`
+                <a href="/${input._id}">${input._id.toUpperCase()}</a>
+                `);
+            })
         }
     )
 })
 
+$('#search_form').on('submit', function (){
+    console.log("/" + searchData[0]._id)
+    location.href= "/" + searchData[0]._id;
+    return false;
+})
