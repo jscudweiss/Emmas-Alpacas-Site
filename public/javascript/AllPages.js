@@ -70,9 +70,17 @@ $('#search').on('keyup', function () {
     searchAndSet();
 })
 
+document.getElementById("search").addEventListener("search", function(event) {
+    searchAndSet();
+});
+
+
 $('#search_form').on('submit', function (){
     console.log("/" + searchData[0]._id)
     switch (searchData[0]._id){
+        case "NA":
+            location.href= "#";
+            break;
         case "contactus":
             location.href= "/contact";
             break;
