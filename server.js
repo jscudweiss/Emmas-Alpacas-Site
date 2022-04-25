@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
-
+const {Schema} = mongoose;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
@@ -15,24 +15,53 @@ mongoose.connect('mongodb://localhost:27017/alpacaDB',
     });
 
 // =============================================================
+// page: name, info, extra info
+const pageSchema = new Schema({
+    page_name: {
+        type: String,
+        required: "required"
+    },
+    page_data: {
+        type: String,
+        required: "required"
+    },
+    page_info_extra: {
+        type: String
+    }
+})
+
+pageSchema.index({
+    page_name: 'text',
+    page_data: 'text',
+    page_info_extra: 'text'
+}, {
+    name: 'search_Index', weights: {
+        page_name: 100,
+        page_data: 5,
+        page_info_extra: 1
+    }, default_language: 'none'
+})
+
+const Page = mongoose.model('Page', pageSchema);
+
 
 // contact: name, email, phone number, message
 const contactSchema = {
     name: {
-        type:String,
-        required:[true, "Name cannot be empty"]
+        type: String,
+        required: [true, "Name cannot be empty"]
     },
     email: {
-        type:String,
-        required:[true, "Email cannot be empty"]
+        type: String,
+        required: [true, "Email cannot be empty"]
     },
     phone_number: {
-        type:String,
-        required:[true, "Phone Number cannot be empty"]
+        type: String,
+        required: [true, "Phone Number cannot be empty"]
     },
     message: {
-        type:String,
-        required:[true, "Message cannot be empty"]
+        type: String,
+        required: [true, "Message cannot be empty"]
     }
 }
 
@@ -40,16 +69,16 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 app.post("/save_contact", (req, res) => {
     Contact.create({
-        name:req.body.name,
-        email:req.body.email,
-        phone_number:req.body.phone_number,
-        message:req.body.message
+        name: req.body.name,
+        email: req.body.email,
+        phone_number: req.body.phone_number,
+        message: req.body.message
     }, function (err, contact) {
         if (err) {
             return console.error(err);
         } else {
             console.log("contact saved to database");
-            res.redirect("/ContactUs.html?thank="+true);
+            res.redirect("/ContactUs.html?thank=" + true);
         }
     });
 })
@@ -59,12 +88,12 @@ app.post("/save_contact", (req, res) => {
 // newsletter: email, message (optional)
 const newsletterSchema = {
     email: {
-        type:String,
-        required:[true, "Email cannot be empty"]
+        type: String,
+        required: [true, "Email cannot be empty"]
     },
     message: {
-        type:String,
-        required:false
+        type: String,
+        required: false
     }
 }
 
@@ -72,25 +101,25 @@ const Newsletter = mongoose.model('Newsletter', newsletterSchema);
 
 app.post("/save_newsletter", (req, res) => {
     Newsletter.create({
-        email:req.body.email,
-        message:req.body.message
+        email: req.body.email,
+        message: req.body.message
     }, function (err, newsletter) {
         if (err) {
             return console.error(err);
         } else {
             console.log("newsletter saved to database");
-            res.redirect("/NewsLetter.html?thank="+true);
+            res.redirect("/NewsLetter.html?thank=" + true);
         }
     });
 })
 
-app.post("/search", (req, res)=>{
+app.post("/search", (req, res) => {
 
 })
 
 // =============================================================
 
-app.listen(3000, function() {
+app.listen(3000, function () {
     console.log("server started at 3000");
 })
 
@@ -122,4 +151,42 @@ app.get('/Newsletter', function (req, res) {
 app.get('/Store', function (req, res) {
     res.sendFile(__dirname + "/public/Store.html");
 })
+app.get("/get_search_results", (req, res) => {
+    const sk = req.query.search_key.toString();
+    Page.aggregate([
+            {
+                "$match": {
+                    "$text": {
+                        "$regex": sk,
+                    }
+                }
+            }, {
+                "$addFields": {Score: {$meta: "textScore"}}
+            },
+            {
+                "$group": {
+                    _id: "$page_name",
+                    score: {$sum: "$Score"},
+                    count: {$sum: 1}
+                }
+            }
+        ], function (err, data) {
+            if (err) {
+                console.log("err" + err);
+                res.send({
+                    "message": "error: " + err,
+                    "data": data
+                })
+            } else {
+                //console.log(data);
+                console.log("success");
+                res.send({
+                    "message": "success",
+                    "data": data
+                })
+            }
+        }
+    )
+})
+;
 

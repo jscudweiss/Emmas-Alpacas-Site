@@ -11,7 +11,6 @@ mongoose.connect('mongodb://localhost:27017/alpacaDB',
     });
 
 const pageSchema = new Schema({
-    //stock_num,make,model,year,color,url,price
     page_name: {
         type: String,
         required: "required"
@@ -23,6 +22,18 @@ const pageSchema = new Schema({
     page_info_extra: {
         type: String
     }
+})
+
+pageSchema.index({
+    page_name: 'text',
+    page_data: 'text',
+    page_info_extra: 'text'
+}, {
+    name: 'search_Index', weights: {
+        page_name: 100,
+        page_data: 5,
+        page_info_extra: 1
+    }, default_language: 'none'
 })
 
 const Page = mongoose.model('Page', pageSchema);
