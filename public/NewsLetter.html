@@ -16,7 +16,8 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- javascript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
     <!--    google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,13 +41,14 @@
 <body id="bcontainer" class="container">
 
 
-
-<section id="navBar" >
+<section id="navBar">
     <nav class="navbar navbar-expand-sm navbar-custom">
         <div class="container-fluid">
             <img src="photos/merchandise%20pictures/emma's%20logo%202.png" width="100" height="100" id="logo" alt="...">
             <a id="nav_head" class="navbar-brand" href="/" style="padding-left: 20px;">Emma's Acres Alpacas</a>
-            <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+               aria-label="Toggle navigation">
                 <span> </span>
                 <span> </span>
                 <span> </span>
@@ -58,7 +60,7 @@
                     <a class="nav-link" href="/Store">Store</a>
                     <a class="nav-link" href="/Gallery">Gallery</a>
                     <a class="nav-link" href="/Calendar">Calendar</a>
-                    <a class="nav-link active"  aria-current="page"  href="/Newsletter">Newsletter</a>
+                    <a class="nav-link active" aria-current="page" href="/Newsletter">Newsletter</a>
                     <a class="nav-link" href="/Alpaca-Facts">Alpaca Facts</a>
                     <a class="nav-link" href="/About">About</a>
                 </div>
@@ -67,16 +69,24 @@
                         <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search"
                                aria-label="Search"
                                id="search" name="search" onfocus="showSearch()" onblur="hideSearch()">
-                        <div class="dropdown-content" id="searchResults">
+                        <div class="dropdown-content" id="searchResults"><a href="/alpaca-facts">ALPACA-FACTS</a>
+                            <a href="/home">HOME</a>
+                            <a href="/contact">CONTACT US</a>
+                            <a href="/newsletter">NEWSLETTER</a>
+                            <a href="/about">ABOUT</a>
+                            <a href="/gallery">GALLERY</a>
+                            <a href="/calendar">CALENDAR</a>
+                            <a href="/store">STORE</a>
                         </div>
                     </div>
-                </form>
             </div>
+            </form>
+        </div>
         </div>
     </nav>
 
-<!--    <br>-->
-<!--    <br>-->
+    <!--    <br>-->
+    <!--    <br>-->
 
 </section>
 
@@ -87,7 +97,7 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-10">
                 <div class="text-center my-5 searchable">
-                    Subscribe to our holiday  newsletter!
+                    Subscribe to our holiday newsletter!
 
                 </div>
             </div>
@@ -100,11 +110,12 @@
     <div class="col-6" style="padding:80px;">
         <form action="/save_newsletter" method="post">
 
-            <div class="form-group searchable" >
+            <div class="form-group searchable">
                 <p>Interested in being notified of special events? Enter your email here: </p>
                 <label for="email">Email address:</label>
                 <br>
-                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com"
+                       required>
             </div>
 
             <br>
@@ -131,22 +142,20 @@
         </form>
 
 
-</div>
+    </div>
 
 
+    <br>
+    <br>
 
-        <br>
-        <br>
-
-        <div class="col-6" style="padding:80px;">
-            <img src="photos/alpaca-pictures/two_alpacas.jpg" width="400" height="500">
-        </div>
+    <div class="col-6" style="padding:80px;">
+        <img src="photos/alpaca-pictures/two_alpacas.jpg" width="400" height="500">
+    </div>
 </div>
 
 
 <br>
 <br>
-
 
 
 <!--footer-->
