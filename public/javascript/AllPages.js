@@ -56,7 +56,7 @@ function searchAndSet() {
                 switch (includes) {
                     case true:
                         shownText = shownText + " : " + sk;
-                        link = link + "search?=" + sk;
+                        link = link + "?search=" + sk;
                         break;
                 }
                 $('#searchResults').append(`
