@@ -133,6 +133,9 @@ app.get('/Calendar', function (req, res) {
 app.get('/Contact', function (req, res) {
     res.sendFile(__dirname + "/public/ContactUs.html");
 })
+app.get('/Contactus', function (req, res) {
+    location.href("/Contact");
+})
 app.get('/Gallery', function (req, res) {
     res.sendFile(__dirname + "/public/Gallery.html");
 })

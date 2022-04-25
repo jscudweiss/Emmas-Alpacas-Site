@@ -20,8 +20,19 @@ $('#search').on('keyup', function () {
                 return b.count - a.count;
             })
             searchData.forEach((input) => {
+                let shownText = "";
+                let link = "";
+                switch (input._id){
+                    case "contactus":
+                        shownText = "Contact Us"
+                        link = "contact"
+                        break;
+                    default:
+                        shownText = input._id
+                        link = input._id
+                }
                 $('#searchResults').append(`
-                <a href="/${input._id}">${input._id.toUpperCase()}</a>
+                <a href="/${link}">${shownText.toUpperCase()}</a>
                 `);
             })
         }
@@ -30,6 +41,13 @@ $('#search').on('keyup', function () {
 
 $('#search_form').on('submit', function (){
     console.log("/" + searchData[0]._id)
-    location.href= "/" + searchData[0]._id;
+    switch (searchData[0]._id){
+        case "contactus":
+            location.href= "/contact";
+            break;
+        default:
+            location.href= "/" + searchData[0]._id;
+    }
+
     return false;
 })
