@@ -1,3 +1,6 @@
-.header{
-    font-size: 200px;
+#header{
+    font-size:80px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+    letter-spacing: 5px;
 }

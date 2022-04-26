@@ -1,0 +1,19 @@
+
+#news_header{
+    font-size:75px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+#news_form{
+    font-family: "Candara", sans-serif;
+    /*font-weight:bold;*/
+}
+
+#card{
+    padding-left:40px;
+    padding-right: 40px;
+    justify-content: center;
+
+}

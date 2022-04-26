@@ -8,3 +8,9 @@
 .fact-btn{
     width: 80%;
 }
+
+
+#AlpacaFacts {
+    font-weight:bold;
+    font-family: "Candara", sans-serif;
+}

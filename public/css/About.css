@@ -1,0 +1,24 @@
+#about_header{
+    font-size:75px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+#emma{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#info_header{
+    font-size:50px;
+    font-family: "Candara", sans-serif;
+    font-weight:bold;
+}
+
+#info{
+    font-size: 20px;
+    font-family: "rockwell", serif;
+}

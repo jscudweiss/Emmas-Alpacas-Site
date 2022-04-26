@@ -17,14 +17,6 @@
     background-color: var(--warm_grey);
 }
 
-#header{
-    font-size:100px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
-
-
 
 #footer{
     height: 80px;
@@ -52,99 +44,16 @@
 
 
 
-#links{
-    font-size:50px;
-    font-family:"Candara",  sans-serif;
-    font-weight: bold;
-    align-content: center;
-}
-
-#link1,#link2,#link3 {
-    font-size:30px;
-    font-family:"Candara", sans-serif;
-    font-weight: bold;
-    align-content:center;
-}
 
 
-#about_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
 
-#sunny_alpacas, #alpaca_face, #3_alpacas {
-    object-fit: cover;
-}
 
-#emma{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
-#info_header{
-    font-size:50px;
-    font-family: "Candara", sans-serif;
-    font-weight:bold;
-}
 
-#info{
-    font-size: 20px;
-    font-family: "rockwell", serif;
-}
 
-#gallery_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-}
 
-#news_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
 
-#news_form{
-    font-family: "Candara", sans-serif;
-    /*font-weight:bold;*/
-}
 
-#card{
-    padding-left:40px;
-    padding-right: 40px;
-    justify-content: center;
-
-}
-
-#card_1, #card_2, #card_3{
-    font-family: "Candara", sans-serif;
-    height: 15rem;
-    background-color: #F4F1EF;
-    width: 300px;
-
-}
-
-#AlpacaFacts {
-    font-weight:bold;
-    font-family: "Candara", sans-serif;
-}
-
-#contact_header{
-    font-size:75px;
-    font-family: "Niagara Engraved", serif;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
-
-#visits {
-
-    font-family: "Candara", sans-serif;
-}
 
 .dropdown {
     position: relative;
