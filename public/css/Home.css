@@ -1,6 +1,42 @@
 #header{
-    font-size:40px;
+    font-size:100px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+    letter-spacing: 7px;
+    color: #424242;
+}
+
+#established{
+    font-size:50px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #454545;
+
+}
+
+#location{
+    font-size:20px;
+    font-family: "", serif;
+    font-weight: bold;
+    color: #454545;
+
+}
+
+#info{
+    font-size:30px;
     font-family: "Candara", serif;
     font-weight: bold;
-    /*letter-spacing: 5px;*/
+    color: #454545;
+}
+
+.brmedium {
+    display: block;
+    margin-bottom: 1em;
+    color: #454545;
+}
+
+.brlarge {
+    display: block;
+    margin-bottom: 2em;
 }
