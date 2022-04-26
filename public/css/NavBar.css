@@ -36,9 +36,10 @@ nav:after {
 .navbar-custom .navbar-nav .nav-link {
     color: var(--text_warm);
 }
+
 /* change the color of active or hovered links */
 .navbar-custom .navbar-nav .active{
-    color: var(--text_light) !important;
+    color: var(--text_light);
 }
 
 
@@ -109,6 +110,11 @@ nav:after {
 }
 
 
-
-
+.nav-link:hover{
+    background-color: #ddd;
+    color: dodgerblue!important;
+}
+.active:hover{
+    color: purple!important;
+}
 
