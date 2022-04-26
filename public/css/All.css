@@ -5,9 +5,20 @@
     --text_dark: #73706a;
     --text_warm: #545048;
     --text_light: #a8a296;
+    --image_increase: 1.025;
 
 }
 
+img:hover{
+    -webkit-transform: scale(var(--image_increase)); /* Saf3.1+, Chrome */
+    -moz-transform: scale(var(--image_increase)); /* FF3.5+ */
+    -ms-transform: scale(var(--image_increase)); /* IE9 */
+    -o-transform: scale(var(--image_increase)); /* Opera 10.5+ */
+    transform: scale(var(--image_increase));
+    /* IE6–IE9 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+
+}
 
 #bcontainer {
     background-color: var(--warm_grey) !important;
@@ -39,20 +50,6 @@
     /*font-weight: bold;*/
     /*align-content: center;*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .dropdown {
