@@ -1,5 +1,29 @@
+:root{
+    --navBack: #faf7f5;
+}
+
 .navbar-custom {
-    background-color: #faf7f5;
+    background-color: var(--navBack);
+}
+
+nav:before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    top: 0;
+    right: 100%;
+    background-color: var(--navBack);
+}
+
+nav:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    top: 0;
+    right: -100%;
+    background-color: var(--navBack);
 }
 
 .navbar-custom .navbar-brand,
