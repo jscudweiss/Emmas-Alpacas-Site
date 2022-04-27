@@ -57,12 +57,15 @@
                     <a class="nav-link" href="/Alpaca-Facts">Alpaca Facts</a>
                     <a class="nav-link" href="/About">About</a>
                 </div>
-                <form class="form-inline my-2 my-lg-0 ms-auto">
-                    <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search" aria-label="Search"
-                           id="search" name="search">
-                    <datalist id="searchResults">
-                        <option value="testval">
-                    </datalist>
+                <form class="form-inline my-2 my-lg-0 ms-auto" id="search_form">
+                    <div class="dropdown" id="searchbox">
+                        <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search"
+                               aria-label="Search"
+                               id="search" name="search" onfocus="showSearch()" onblur="hideSearch()">
+                        <div class="dropdown-content" id="searchResults">
+                            <a href="/home">HOME</a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
