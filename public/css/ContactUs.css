@@ -10,3 +10,12 @@
 
     font-family: "Candara", sans-serif;
 }
+
+.card-body{
+    background-color: #ECF1F6;
+    font-family: Candara, serif;
+}
+
+.form-group{
+    font-family: Candara, serif;
+}
