@@ -113,8 +113,9 @@ nav:after {
 .nav-link:hover{
     background-color: #ddd;
     color: dodgerblue!important;
+    text-decoration:underline ;
 }
 .active:hover{
-    color: purple!important;
+    color: #551A8B !important;
 }
 
