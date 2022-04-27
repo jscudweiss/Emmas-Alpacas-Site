@@ -1,12 +1,14 @@
 #factNameList{
-    height: 40rem;
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 10;
 }
 
 .fact-btn{
     width: 80%;
+    background: none;
+    border: none;
 }
 
 
@@ -15,9 +17,18 @@
     font-family: "Candara", sans-serif;
 }
 
-#news_header{
+#fact_header{
     font-weight:bold;
     font-family: "Candara", sans-serif;
-
     font-size:80px;
+}
+@media (min-width: 769px) {
+    #bottomGroup{
+        display: none;
+    }
+}
+
+#bottomGroup{
+    position: sticky;
+    bottom: 0;
 }

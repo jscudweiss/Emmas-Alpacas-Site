@@ -78,13 +78,13 @@
 
 <div class="container">
     <!--header-->
-    <section id="news_header">
+    <section id="fact_header">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
                 <div style="font-family: 'Candara', sans-serif; " class="text-center my-5 searchable">
                     Alpaca Facts
                     <br>
-                    <h4 style="font-family: 'Candara', sans-serif">Click on each button to learn about the different
+                    <h4 style="font-family: 'Candara', sans-serif" id="header_text">Click on each button to learn about the different
                         topics!</h4>
                 </div>
             </div>
@@ -94,16 +94,20 @@
 
     <section id="AlpacaFacts" class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-sm-12 col-md-3">
+                <div class="row">
+                    <input class="form-control mr-sm-2" placeholder="Filter"
+                           id="filter" name="filter">
+                </div>
                 <div id="factNameList">
                     <div class="row">
-                        <button type="button" class="btn btn-success fact-btn" value="${fact.Info}">${fact.Title}
+                        <button type="button" class="btn fact-btn" value="${fact.Info}">${fact.Title}
                         </button>
                     </div>
                     <br>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-md-9 col-sm-12" id="infoDiv">
                 <h3 id="factTitle">What is an alpaca?</h3>
                 <p id="factDetail">Alpacas are members of the South American Camelid Family. This includes camels,
                     llamas, alpacas, vicunas, and guancos. Unlike llamas, which were primarily used as pack-animals,
@@ -113,6 +117,10 @@
                     alpacas was stopped in 1998. The alpacas that are here are the only breeding stock to improve
                     bloodlines. This makes breeding them a good investment opportunity.</p>
                 <img src="" alt="..." id="factPic">
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="First group" id="bottomGroup">
+                <button id="returnFilter" class="btn btn-primary">Go to Filter</button>
+                <button id="returnTop" class="btn btn-secondary">Go to Top</button>
             </div>
         </div>
 
