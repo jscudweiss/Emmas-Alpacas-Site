@@ -9,7 +9,9 @@
 
 }
 
-
+body {
+    overflow-x:hidden;
+}
 
 #bcontainer {
     background-color: var(--warm_grey) !important;
