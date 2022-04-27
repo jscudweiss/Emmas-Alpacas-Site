@@ -9,7 +9,7 @@
 
 }
 
-img:hover{
+nav img:hover{
     -webkit-transform: scale(var(--image_increase)); /* Saf3.1+, Chrome */
     -moz-transform: scale(var(--image_increase)); /* FF3.5+ */
     -ms-transform: scale(var(--image_increase)); /* IE9 */
