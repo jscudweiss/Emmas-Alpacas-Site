@@ -188,7 +188,6 @@ app.get("/get_search_results", (req, res) => {
                 })
             } else {
                 //console.log(data);
-                console.log("success");
                 res.send({
                     "message": "success",
                     "data": data
