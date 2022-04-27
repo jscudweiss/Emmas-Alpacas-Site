@@ -7,7 +7,7 @@
 }
 
 #established{
-    font-size:50px;
+    font-size:30px;
     font-family: "Niagara Engraved", serif;
     font-weight: bold;
     letter-spacing: 3px;
@@ -39,4 +39,29 @@
 .brlarge {
     display: block;
     margin-bottom: 2em;
+}
+
+.hrmedium {
+    margin:0;
+    line-height:0;
+}
+
+.overlay {
+    color:#fff;
+    position:absolute;
+    z-index:30;
+    top:50%;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:300px;
+    font-family: "Niagara Engraved", serif;
+    font-weight: bold;
+    letter-spacing: 7px;
+
+}
+
+.scroll_container{
+    text-align: center;
+    size: 25px;
 }
