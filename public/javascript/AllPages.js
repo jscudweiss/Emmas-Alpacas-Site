@@ -9,6 +9,17 @@ function hideSearch() {
     }
 }
 
+const el = document.querySelector("#navBar")
+const observer = new IntersectionObserver(
+    ([e]) => {
+        console.log(e.intersectionRatio);
+        $('#logo').toggleClass("is-pinned", e.intersectionRatio < 1);
+    },
+    {threshold: [1]}
+);
+
+observer.observe(el);
+
 let searchData = [];
 
 function searchAndSet() {
@@ -80,9 +91,9 @@ $('#search_form').on('submit', function () {
     let sk = $("#search").val().toLowerCase();
     let includes = !(shownText.includes(sk.toUpperCase()))
     let hasout = ""
-    switch (includes){
+    switch (includes) {
         case true:
-            hasout= "?search=" + sk;
+            hasout = "?search=" + sk;
     }
     switch (searchData[0]._id) {
         case "NA":
@@ -97,3 +108,4 @@ $('#search_form').on('submit', function () {
 
     return false;
 })
+
