@@ -129,13 +129,12 @@ nav:after {
 }
 
 nav img{
-    transition:0.1s ease-in-out;
+    transition:0.09s;
 }
 
 .is-pinned {
     width: 40px;
     height: 40px;
-    filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713, SizingMethod='auto expand');
 }
 
 nav img:hover{
