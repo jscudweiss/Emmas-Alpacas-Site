@@ -34,10 +34,10 @@
     <script src="javascript/AllPages.js" defer></script>
 
 </head>
-<body id="bcontainer" class="container">
+<body id="bcontainer">
 
-<section id="navBar">
-    <nav class="navbar navbar-expand-xl navbar-custom">
+<section id="navBar" class="container">
+    <nav class="navbar navbar-expand-sm navbar-custom container">
         <div class="container-fluid">
             <a id="nav_head" class="navbar-brand" href="/" style="padding-left: 20px;"><img
                     src="photos/merchandise%20pictures/emma's%20logo%202.png" width="100" height="100" id="logo"
@@ -57,7 +57,7 @@
                     <a class="nav-link" href="/Gallery">Gallery</a>
                     <a class="nav-link" href="/Calendar">Calendar</a>
                     <a class="nav-link" href="/Newsletter">Newsletter</a>
-                    <a class="nav-link" href="/Alpaca-Facts">Alpaca Facts</a>
+                    <a class="nav-link" href="/Alpaca-facts">Alpaca Facts</a>
                     <a class="nav-link active" aria-current="page" href="/About">About</a>
                 </div>
                 <form class="form-inline my-2 my-lg-0 ms-auto" id="search_form">
@@ -67,6 +67,7 @@
                                id="search" name="search" onfocus="showSearch()" onblur="hideSearch()">
                         <div class="dropdown-content" id="searchResults">
                             <a href="/home">HOME</a>
+
                         </div>
                     </div>
                 </form>
@@ -91,100 +92,106 @@
 
 </section>
 
+<div class="container">
+    <!--information-->
 
-<!--information-->
+    <section>
+        <div id="content-wrapper">
+            <div id="site-content" class="wsite-elements wsite-not-footer">
+                <div class="wsite-section-wrap">
+                    <div class="wsite-section wsite-body-section wsite-background-1">
+                        <div class="wsite-section-content">
+                            <div class="container">
+                                <div class="wsite-section-elements">
+                                    <h2 class="wsite-content-title searchable" id="info_header"
+                                        style="text-align:center;">
+                                        <strong>&ZeroWidthSpace;</strong>
+                                        Our History
+                                    </h2>
+                                    <div class="paragraph" style="text-align:center;">
+                                        <em>
+                                            <span style="color:rgb(97,108,107)"></span>
+                                        </em>
+                                        <br>
+                                    </div>
+                                    <div class="paragraph searchable" id="info" style="text-align:center;">
+                                        Welcome to our farm!
+                                        <br>
+                                        <br>
+                                        Emma's Acres Alpaca Farm was founded in September 2002 by Roger, Collette, and
+                                        Amanda Gage.
+                                        Located in Oxford, MA, we're not far from the city of Worcester or the New
+                                        Hampshire
+                                        border.
+                                        We love visitors, and farm visits are always welcome!
+                                        <br>
+                                        <br>
+                                        Emma's Acres started because of Collette's love for knitting. She became
+                                        especially
+                                        interested in Alpaca fibers
+                                        after reading about them in one of her knitting books. After attending the
+                                        Woodstock
+                                        Fair in Connecticut,
+                                        The Gage family met an alpaca named Emma. This is how the farm came to be!
+                                        <br>
+                                        <br>
+                                        Emma became the first alpaca of the farm. Today, we take care of 20 alpacas on
+                                        our
+                                        farm.
+                                        Make sure to come see us at the North American Alpaca Show and the Big E Show at
+                                        the
+                                        Eastern
+                                        States Exposition.
 
-<section>
-    <div id="content-wrapper">
-        <div id="site-content" class="wsite-elements wsite-not-footer">
-            <div class="wsite-section-wrap">
-                <div class="wsite-section wsite-body-section wsite-background-1">
-                    <div class="wsite-section-content">
-                        <div class="container">
-                            <div class="wsite-section-elements">
-                                <h2 class="wsite-content-title searchable" id="info_header" style="text-align:center;">
-                                    <strong>&ZeroWidthSpace;</strong>
-                                    Our History
-                                </h2>
-                                <div class="paragraph" style="text-align:center;">
-                                    <em>
-                                        <span style="color:rgb(97,108,107)"></span>
-                                    </em>
-                                    <br>
+                                        <br>
+                                        <br>
+
+
+                                    </div>
                                 </div>
-                                <div class="paragraph searchable" id="info" style="text-align:center;">
-                                    Welcome to our farm!
-                                    <br>
-                                    <br>
-                                    Emma's Acres Alpaca Farm was founded in September 2002 by Roger, Collette, and
-                                    Amanda Gage.
-                                    Located in Oxford, MA, we're not far from the city of Worcester or the New Hampshire
-                                    border.
-                                    We love visitors, and farm visits are always welcome!
-                                    <br>
-                                    <br>
-                                    Emma's Acres started because of Collette's love for knitting. She became especially
-                                    interested in Alpaca fibers
-                                    after reading about them in one of her knitting books. After attending the Woodstock
-                                    Fair in Connecticut,
-                                    The Gage family met an alpaca named Emma. This is how the farm came to be!
-                                    <br>
-                                    <br>
-                                    Emma became the first alpaca of the farm. Today, we take care of 20 alpacas on our
-                                    farm.
-                                    Make sure to come see us at the North American Alpaca Show and the Big E Show at the
-                                    Eastern
-                                    States Exposition.
-
-                                    <br>
-                                    <br>
-
-
-                                </div>
+                                <img src="photos/alpaca-pictures/emma.jpg" id="emma">
                             </div>
-                            <img src="photos/alpaca-pictures/emma.jpg" id="emma">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+    </section>
+
+
+    <!--footer-->
+    <div class="container">
+        <footer id="footer" class="text-center text-lg-start bg-custom text-muted">
+            <!-- Section: Social media -->
+            <section
+                    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+            >
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>© Copyright 2022 Emma's Acres Alpacas</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="https://www.facebook.com/EmmasAcres/" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://emmasacresalpacas@gmail.com" class="me-4 text-reset">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+        </footer>
+        <!-- Footer -->
     </div>
-    <br>
-    <br>
-    <br>
-</section>
-
-
-<!--footer-->
-<div class="container">
-    <footer id="footer" class="text-center text-lg-start bg-custom text-muted">
-        <!-- Section: Social media -->
-        <section
-                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-        >
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>© Copyright 2022 Emma's Acres Alpacas</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="https://www.facebook.com/EmmasAcres/" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://emmasacresalpacas@gmail.com" class="me-4 text-reset">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-    </footer>
-    <!-- Footer -->
 </div>
-
 </body>
 </html>

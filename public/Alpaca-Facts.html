@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/Alpaca-Facts.css">
 
 
-
     <!--    Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -34,13 +33,17 @@
     <script src="javascript/AllPages.js" defer></script>
 </head>
 
-<body id="bcontainer" class="container">
+<body id="bcontainer">
 
-<section id="navBar" >
-    <nav class="navbar navbar-expand-sm navbar-custom">
+<section id="navBar" class="container">
+    <nav class="navbar navbar-expand-sm navbar-custom container">
         <div class="container-fluid">
-            <a id="nav_head" class="navbar-brand" href="/" style="padding-left: 20px;"><img src="photos/merchandise%20pictures/emma's%20logo%202.png" width="100" height="100" id="logo" alt="..."></a>
-            <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a id="nav_head" class="navbar-brand" href="/" style="padding-left: 20px;"><img
+                    src="photos/merchandise%20pictures/emma's%20logo%202.png" width="100" height="100" id="logo"
+                    alt="..."></a>
+            <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+               aria-label="Toggle navigation">
                 <span> </span>
                 <span> </span>
                 <span> </span>
@@ -53,16 +56,17 @@
                     <a class="nav-link" href="/Gallery">Gallery</a>
                     <a class="nav-link" href="/Calendar">Calendar</a>
                     <a class="nav-link" href="/Newsletter">Newsletter</a>
-                    <a class="nav-link active" aria-current="page" href="/Alpaca-Facts">Alpaca Facts</a>
+                    <a class="nav-link active" aria-current="page" href="/Alpaca-facts">Alpaca Facts</a>
                     <a class="nav-link" href="/About">About</a>
                 </div>
-                <form class="form-inline my-2 my-lg-0 ms-auto" id="search_form" onsubmit="">
+                <form class="form-inline my-2 my-lg-0 ms-auto" id="search_form">
                     <div class="dropdown" id="searchbox">
                         <input class="form-control mr-sm-2" list="searchResults" type="search" placeholder="Search"
                                aria-label="Search"
                                id="search" name="search" onfocus="showSearch()" onblur="hideSearch()">
                         <div class="dropdown-content" id="searchResults">
                             <a href="/home">HOME</a>
+
                         </div>
                     </div>
                 </form>
@@ -72,78 +76,81 @@
 </section>
 
 
-
-
-<!--header-->
-<section id="news_header">
-    <div class="container px-5">
-        <div class="row gx-5 justify-content-center">
+<div class="container">
+    <!--header-->
+    <section id="news_header">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
                 <div style="font-family: 'Candara', sans-serif; " class="text-center my-5 searchable">
                     Alpaca Facts
                     <br>
-                    <h4 style="font-family: 'Candara', sans-serif">Click on each button to learn about the different topics!</h4>
+                    <h4 style="font-family: 'Candara', sans-serif">Click on each button to learn about the different
+                        topics!</h4>
                 </div>
             </div>
         </div>
-    </div>
-
-</section>
+    </section>
 
 
-
-<section id="AlpacaFacts" class="container">
-    <div class="row">
-        <div class="col-3">
-            <div id="factNameList">
-                <div class="row">
-                    <button type="button" class="btn btn-success fact-btn" value="${fact.Info}">${fact.Title}</button>
+    <section id="AlpacaFacts" class="container">
+        <div class="row">
+            <div class="col-3">
+                <div id="factNameList">
+                    <div class="row">
+                        <button type="button" class="btn btn-success fact-btn" value="${fact.Info}">${fact.Title}
+                        </button>
+                    </div>
+                    <br>
                 </div>
-                <br>
+            </div>
+            <div class="col-9">
+                <h3 id="factTitle">What is an alpaca?</h3>
+                <p id="factDetail">Alpacas are members of the South American Camelid Family. This includes camels,
+                    llamas, alpacas, vicunas, and guancos. Unlike llamas, which were primarily used as pack-animals,
+                    alpacas were raised for their cashmere-like fiber. They have been domesticated for over 5,000 years.
+                    Alpacas are native to the Andean Mountain Range of South America and are primarily found in Bolivia,
+                    Chile and Peru. Alpacas are often raised as an alternative to sheep farming. The importation of
+                    alpacas was stopped in 1998. The alpacas that are here are the only breeding stock to improve
+                    bloodlines. This makes breeding them a good investment opportunity.</p>
+                <img src="" alt="..." id="factPic">
             </div>
         </div>
-        <div class="col-9">
-            <h3 id="factTitle">What is an alpaca?</h3>
-            <p id="factDetail">Alpacas are members of the South American Camelid Family. This includes camels, llamas, alpacas, vicunas, and guancos. Unlike llamas, which were primarily used as pack-animals, alpacas were raised for their cashmere-like fiber. They have been domesticated for over 5,000 years. Alpacas are native to the Andean Mountain Range of South America and are primarily found in Bolivia, Chile and Peru. Alpacas are often raised as an alternative to sheep farming. The importation of alpacas was stopped in 1998. The alpacas that are here are the only breeding stock to improve bloodlines. This makes breeding them a good investment opportunity.</p>
-            <img src="" alt="..." id="factPic">
-        </div>
+
+        <br>
+        <br>
+    </section>
+
+
+    <!--footer-->
+    <div class="container">
+        <footer id="footer" class="text-center text-lg-start bg-custom text-muted">
+            <!-- Section: Social media -->
+            <section
+                    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+            >
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>© Copyright 2022 Emma's Acres Alpacas</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="https://www.facebook.com/EmmasAcres/" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://emmasacresalpacas@gmail.com" class="me-4 text-reset">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+        </footer>
+        <!-- Footer -->
     </div>
-
-    <br>
-    <br>
-</section>
-
-
-<!--footer-->
-<div class="container">
-    <footer id="footer" class="text-center text-lg-start bg-custom text-muted">
-        <!-- Section: Social media -->
-        <section
-                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-        >
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>© Copyright 2022 Emma's Acres Alpacas</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="https://www.facebook.com/EmmasAcres/" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://emmasacresalpacas@gmail.com" class="me-4 text-reset">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
-    </footer>
-    <!-- Footer -->
 </div>
-
-
 </body>
 </html>
