@@ -125,3 +125,11 @@
     font-weight: bold;
     color: #454545;
 }
+
+@media (max-width: 992px) {
+    .home_picture {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
