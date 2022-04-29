@@ -10,7 +10,13 @@
     background: none;
     border: none;
 }
-
+.fact-btn:hover{
+    background: #ddd;
+    color: dodgerblue!important;
+}
+#factPic{
+    max-width: 100%;
+}
 
 #AlpacaFacts {
     font-weight:bold;

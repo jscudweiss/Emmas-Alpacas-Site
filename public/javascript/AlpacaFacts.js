@@ -6,10 +6,10 @@ if (searchKey) {
 }
 $('#factDetail').empty();
 
-function get_fact_List(fact) {
+function get_fact_List(fact, idx) {
     return `
         <div class="row">
-            <button type="button" class="btn fact-btn" value="${fact.Info}" id="${fact.url}">${fact.Title}</button>
+            <button type="button" class="btn fact-btn" value="${fact.Info}" id="Button${idx}" name="${fact.url}">${fact.Title}</button>
         </div>    `
 }
 
@@ -21,22 +21,24 @@ function loadFacts(data, filterVar) {
     const fData = data.filter((fact) => {
         return (fact.Title.toLowerCase().includes(lFilter) || fact.Info.toLowerCase().includes(lFilter));
     })
+    let len = fData.length
     fData.forEach((alpFact) => {
         $('#factNameList').append(() => {
-            return get_fact_List(alpFact);
+            len --;
+            return get_fact_List(alpFact, len);
         });
     })
     $(".fact-btn").click(function () {
         let factText = $(this).attr('value');
         let factTitle = $(this).text();
-        let factUrl = $(this).attr("id");
+        let factUrl = $(this).attr("name");
         console.log(factText);
         $('#factDetail').text(factText);
         $('#factTitle').text(factTitle);
         $('#factPic').attr('src', factUrl);
         console.log(window.innerWidth)
         if(window.innerWidth<=768) {
-            location.href = '#infoDiv';
+            location.href = '#split';
         }
     })
 }
