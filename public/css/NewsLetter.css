@@ -17,3 +17,14 @@
     justify-content: center;
 
 }
+
+@media (max-width: 992px) {
+    #newsletter_picture_div {
+        padding: 0;
+    }
+    #newsletter_picture {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
