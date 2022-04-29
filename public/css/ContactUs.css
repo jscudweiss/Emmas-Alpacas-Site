@@ -19,3 +19,10 @@
 .form-group{
     font-family: Candara, serif;
 }
+
+#map-div {
+    max-height: 175px;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
