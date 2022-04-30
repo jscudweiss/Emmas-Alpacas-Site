@@ -6,6 +6,7 @@ const app = express();
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/fullcalendar',express.static(__dirname + '/node_modules/fullcalendar'));
 app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
 
