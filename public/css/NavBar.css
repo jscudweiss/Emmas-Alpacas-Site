@@ -26,11 +26,19 @@ nav:after {
     left: 100%;
     bottom: 0;
     top: 0;
-    right: -18%;
+    right: -30%;
     background-color: var(--navBack);
 }
-@media only screen and (min-device-width: 769px){
-    nav:after {right: -100%;}
+@media only screen and (max-device-width: 768px){
+    nav:after {right: -18%;}
+    .nav-link{
+        font-size: 22px!important;
+    }
+    #search{
+        height: 50px!important;
+        font-size: 22px!important;
+    }
+
 }
 
 
@@ -122,7 +130,7 @@ nav:after {
 }
 
 .nav-link{
-    font-size: 16px!important;
+    font-size: 16px;
 }
 .nav-link:hover {
     background-color: #ddd;
