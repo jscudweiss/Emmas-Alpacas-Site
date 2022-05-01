@@ -1,0 +1,9 @@
+npm init
+
+npm i express body-parser mongoose cheerio
+
+npm i fullcalendar @fullcalendar/google-calendar bootstrap-icons
+
+node server.js
+
+node DBinitializer.js
