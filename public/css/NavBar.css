@@ -26,9 +26,13 @@ nav:after {
     left: 100%;
     bottom: 0;
     top: 0;
-    right: -19%;
+    right: -18%;
     background-color: var(--navBack);
 }
+@media (min-width: 769px){
+    nav:after {right: -100%;}
+}
+
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
