@@ -6,7 +6,7 @@
 }
 
 .splitter{
-    display: none;
+    display: block;
 }
 
 .fact-btn{
