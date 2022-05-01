@@ -57,7 +57,7 @@
     font-weight: bold;
     letter-spacing: 7px;
 }
-@media (max-width: 768px) {
+@media only screen and (max-device-width: 768px) {
     .overlay h1{
         top:0!important;
         font-size: 50px!important;
