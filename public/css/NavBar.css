@@ -117,7 +117,9 @@ nav:after {
     /*font-weight: bold;*/
 }
 
-
+.nav-link{
+    font-size: 14px!important;
+}
 .nav-link:hover {
     background-color: #ddd;
     color: dodgerblue !important;
