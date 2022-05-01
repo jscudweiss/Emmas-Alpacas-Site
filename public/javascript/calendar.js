@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calendar.render();
-    location.href = '#subtext';
 });
 
 
