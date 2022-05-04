@@ -10,6 +10,7 @@ app.use('/fullcalendar',express.static(__dirname + '/node_modules/fullcalendar')
 app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
 
+//mongoose.connect('mongodb://localhost:27017/alpacaDB'
 mongoose.connect('mongodb://34.148.84.215:27017/alpacaDB',
     {useNewUrlParser: true}, function () {
         console.log("alpacaDB connection successful");
