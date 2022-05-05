@@ -13,4 +13,4 @@ resources:
   disk_size_gb: 10
 network:
   instance_tag: https-server
-  name: my-node-network
+  name: mongodb-4-servers-vm-0
