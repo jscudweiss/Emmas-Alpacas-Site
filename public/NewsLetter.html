@@ -97,7 +97,7 @@
 
     <div id="news_form" class="row">
         <div class="col-lg-6 col-md-12" style="padding:80px;">
-            <form action="/save_newsletter" method="post">
+            <form action="/save_newsletter" method="post" id="news_form_submit">
 
                 <div class="form-group searchable">
                     <p>Interested in being notified of special events? Enter your email here: </p>
@@ -121,17 +121,16 @@
                 <br>
 
                 <div class="mb-3">
-                    <p id="thank_message" style="color: green"></p>
-                </div>
-
-                <div class="mb-3">
                     <button type="submit" class="btn btn-success" style="width: 20%">Save</button>
                 </div>
 
             </form>
 
-
+            <div class="mb-3">
+                <p id="thank_message" style="color: green"></p>
+            </div>
         </div>
+
 
 
         <br>
