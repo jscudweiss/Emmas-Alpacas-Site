@@ -11,6 +11,6 @@ resources:
   cpu: 1
   memory_gb: 0.5
   disk_size_gb: 10
-network:
-  instance_tag: https-server
-  name: mongodb-4-servers-vm-0
+#network:
+#  instance_tag: https-server
+#  name: mongodb-4-servers-vm-0
