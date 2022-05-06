@@ -1,4 +1,4 @@
-npm init
+nnpm init
 
 npm i express body-parser mongoose cheerio
 
