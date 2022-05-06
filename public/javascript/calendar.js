@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-        googleCalendarApiKey: 'AIzaSyAPRI9sO3Jq1sDPEgz5ply9kMiQib5ZZLY',
+        googleCalendarApiKey: 'AIzaSyAX8G6BQ7251lgDblOKQjdSUkq3JbvT9gA',
         themeSystem: 'bootstrap5',
         initialView: 'dayGridMonth',
         headerToolbar: {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
         events: {
-            googleCalendarId: 'ag2c5620rn7vnm9hslau2veokk@group.calendar.google.com'
+            googleCalendarId: '08g6o144ot5l6e2niu01td1dmo@group.calendar.google.com'
         }
     });
 
