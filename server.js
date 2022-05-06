@@ -114,7 +114,7 @@ app.post("/search", (req, res) => {
 
 // =============================================================
 
-app.listen(process.env.port || 3000, function () {
+app.listen(process.env.port, function () {
     console.log("server started at 57466");
 })
 
