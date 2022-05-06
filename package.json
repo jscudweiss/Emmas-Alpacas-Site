@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "prestart": "node DBinitializer.js",
     "start": "node server.js"
   },
   "repository": {
