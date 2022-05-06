@@ -13,10 +13,11 @@ app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
 
 //mongoose.connect('mongodb://localhost:27017/alpacaDB',
-// mongoose.connect(process.env.DATABASE,
-//     {useNewUrlParser: true}, function () {
-//         console.log("alpacaDB connection successful");
-//     });
+const uri = process.env.MONGODB_URI;
+mongoose.connect(uri,
+    {useNewUrlParser: true}, function () {
+        console.log("alpacaDB connection successful");
+    });
 
 // =============================================================
 // page: name, info, extra info
@@ -114,8 +115,8 @@ app.post("/search", (req, res) => {
 
 // =============================================================
 
-app.listen(process.env.port, function () {
-    console.log("server started at 57466");
+app.listen(process.env.port || 3000, function () {
+    console.log("server started at 3000");
 })
 
 // Page Navigation

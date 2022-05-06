@@ -7,7 +7,8 @@ const cheerio = require('cheerio')
 // console.log(jsonList);
 
 //mongoose.connect('mongodb://localhost:27017/alpacaDB'
-mongoose.connect(process.env.DATABASE,
+const uri = process.env.MONGODB_URI;
+mongoose.connect(uri,
     {useNewUrlParser: true}, function () {
         console.log("db connection successful");
     });
