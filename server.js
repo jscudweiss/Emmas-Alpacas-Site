@@ -12,26 +12,25 @@ app.use(express.static(__dirname + "/public"));
 
 // =============================================================
 
-
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://ischatia:testpassword@cluster0.hirkl.mongodb.net/alpacaDB?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-    const collection = client.db("test").collection("devices");
-    // perform actions on the collection object
-    console.log("testing if this works")
-    // client.close();
-});
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const uri = "mongodb+srv://ischatia:testpassword@cluster0.hirkl.mongodb.net/alpacaDB?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+// client.connect(err => {
+//     const collection = client.db("test").collection("devices");
+//     // perform actions on the collection object
+//     console.log("testing if this works")
+//     // client.close();
+// });
 
 // mongoose.connect('mongodb://localhost:27017/alpacaDB',
 //     {useNewUrlParser: true}, function () {
 //         console.log("alpacaDB connection successful");
 //     });
 
-// mongoose.connect('mongodb://34.148.84.215:27017/alpacaDB',
-//     {useNewUrlParser: true}, function () {
-//         console.log("alpacaDB connection successful");
-//     });
+mongoose.connect('mongodb://34.148.84.215:27017/alpacaDB',
+    {useNewUrlParser: true}, function () {
+        console.log("alpacaDB connection successful");
+    });
 
 // =============================================================
 
