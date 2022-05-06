@@ -4,15 +4,15 @@ const fs = require('fs');
 const cheerio = require('cheerio')
 // console.log(jsonList);
 
-mongoose.connect('mongodb://localhost:27017/alpacaDB',
-    {useNewUrlParser: true}, function () {
-        console.log("db connection successful");
-    });
-
-// mongoose.connect('mongodb://34.148.84.215:27017/alpacaDB',
+// mongoose.connect('mongodb://localhost:27017/alpacaDB',
 //     {useNewUrlParser: true}, function () {
 //         console.log("db connection successful");
 //     });
+
+mongoose.connect('mongodb://34.148.84.215:27017/alpacaDB',
+    {useNewUrlParser: true}, function () {
+        console.log("db connection successful");
+    });
 
 const pageSchema = new Schema({
     page_name: {
