@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 const fs = require('fs');
@@ -5,7 +7,7 @@ const cheerio = require('cheerio')
 // console.log(jsonList);
 
 //mongoose.connect('mongodb://localhost:27017/alpacaDB'
-mongoose.connect('mongodb://35.231.140.195:27017/alpacaDB',
+mongoose.connect(process.env.DATABASE,
     {useNewUrlParser: true}, function () {
         console.log("db connection successful");
     });

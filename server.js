@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 // npm i express body-parser mongoose
 
 const express = require("express");
@@ -11,7 +13,7 @@ app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
 
 //mongoose.connect('mongodb://localhost:27017/alpacaDB',
-mongoose.connect('mongodb://35.231.140.195:27017/alpacaDB',
+mongoose.connect(process.env.DATABASE,
     {useNewUrlParser: true}, function () {
         console.log("alpacaDB connection successful");
     });
