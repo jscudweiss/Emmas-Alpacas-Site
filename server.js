@@ -74,7 +74,7 @@ app.post("/save_contact", (req, res) => {
             return console.error(err);
         } else {
             console.log("contact saved to database");
-            res.redirect("/ContactUs.html?thank=" + true);
+            res.redirect("/ThankYou.html");
         }
     });
 })
@@ -104,7 +104,7 @@ app.post("/save_newsletter", (req, res) => {
             return console.error(err);
         } else {
             console.log("newsletter saved to database");
-            res.redirect("/NewsLetter.html?thank=" + true);
+            res.redirect("/ThankYou.html");
         }
     });
 })
@@ -149,6 +149,9 @@ app.get('/Newsletter', function (req, res) {
 })
 app.get('/Store', function (req, res) {
     res.sendFile(__dirname + "/public/Store.html");
+})
+app.get('/ThankYou', function (req, res) {
+    res.sendFile(__dirname + "/public/ThankYou.html");
 })
 app.get("/get_search_results", (req, res) => {
     const sk = req.query.search_key;
