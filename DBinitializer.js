@@ -6,7 +6,7 @@ const fs = require('fs');
 const cheerio = require('cheerio')
 // console.log(jsonList);
 
-//mongoose.connect('mongodb://localhost:27017/alpacaDB'
+//const uri='mongodb://localhost:27017/alpacaDB';
 const uri = process.env.MONGODB_URI;
 mongoose.connect(uri,
     {useNewUrlParser: true}, function () {
