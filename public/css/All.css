@@ -26,19 +26,19 @@ body {
     height: 80px;
     padding-top: 10px;
     padding-left:10px;
-    font-family: "Candara", sans-serif;
+    font-family: "Rockwell", sans-serif;
 }
 
 
 #welcome{
     font-size:30px;
-    font-family:"Candara", sans-serif;
+    font-family:"Rockwell", sans-serif;
     /*font-weight:bold;*/
 }
 
 #our_gallery, #our_newsletter, #about_us {
     font-size:50px;
-    font-family:"Candara",  sans-serif;
+    font-family:"Rockwell",  sans-serif;
     /*font-weight: bold;*/
     /*align-content: center;*/
 }
