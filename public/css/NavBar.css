@@ -29,7 +29,7 @@ nav:after {
     right: -30%;
     background-color: var(--navBack);
 }
-@media only screen and (max-device-width: 768px){
+@media only screen and (max-device-width: 768px) or (max-width: 768px){
     nav:after {right: -18%;}
     .nav-link{
         font-size: 22px!important;

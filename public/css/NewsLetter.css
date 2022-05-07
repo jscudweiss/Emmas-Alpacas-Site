@@ -18,7 +18,7 @@
 
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 768px) or (max-width: 768px) {
     #newsletter_picture_div {
         padding: 0;
     }

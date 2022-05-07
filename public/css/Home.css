@@ -67,6 +67,26 @@
     }
 }
 
+@media only screen and (max-device-width: 768px) or (max-width: 768px) {
+    .overlay h1{
+        top:0!important;
+        font-size: 50px!important;
+    }
+    .carousel-caption{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .overlay h1{
+        top:0!important;
+        font-size: 50px!important;
+    }
+    .carousel-caption{
+        display: none;
+    }
+}
+
+
 .bi-arrow-down {
     align-content: center;
 

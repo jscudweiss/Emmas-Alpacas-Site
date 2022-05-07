@@ -35,7 +35,7 @@
     font-family: "Rockwell", sans-serif;
     font-size:80px;
 }
-@media only screen and (min-device-width: 769px) {
+@media only screen and (min-device-width: 769px) or (min-width: 769px)  {
     #bottomGroup{
         display: none;
     }
