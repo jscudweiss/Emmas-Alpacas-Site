@@ -103,9 +103,9 @@
                     <form action="save_contact" method="post" id="news_form_submit">
 
                         <div class="form-group">
-                            <label for="Name">Name:</label>
+                            <label for="name">Name:</label>
                             <br>
-                            <input type="name" class="form-control" name="name" id="name" placeholder="Name">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
                         </div>
 
                         <br>
@@ -113,7 +113,7 @@
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <br>
-                            <input type="email" class=form-control name="email" id="email" placeholder="name@example.com">
+                            <input type="email" class=form-control name="email" id="email" placeholder="name@example.com" required>
                         </div>
 
                         <br>
@@ -121,8 +121,7 @@
                         <div class="form-group">
                             <label for="phone_number">Phone Number:</label>
                             <br>
-                            <input type="number" class="form-control" name="phone_number" id="phone_number"
-                                   placeholder="xxx-xxx-xxxx">
+                            <input type="tel" class="form-control" name="phone_number" id="phone_number" placeholder="xxx-xxx-xxxx" required>
                         </div>
 
                         <br>
@@ -130,19 +129,20 @@
                         <div class="form-group">
                             <label for="message">Enter your message:</label>
                             <br>
-                            <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                            <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
                         </div>
 
                         <br>
+
+                        <div class="mb-3">
+                            <p id="error_message" style="color: red"></p>
+                        </div>
 
                         <div class="mb-3">
                             <button type="submit" class="btn btn-success" style="width: 20%">Save</button>
                         </div>
 
                     </form>
-                    <div class="mb-3">
-                        <p id="thank_message" style="color: green"></p>
-                    </div>
                 </div>
             </div>
 
