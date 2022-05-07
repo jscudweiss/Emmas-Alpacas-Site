@@ -115,8 +115,8 @@ app.post("/search", (req, res) => {
 
 // =============================================================
 
-app.listen(8080, function () {
-    console.log("server started at 8080");
+app.listen(process.env.PORT || 3000, function () {
+    console.log("server started at 3000");
 })
 
 // Page Navigation
