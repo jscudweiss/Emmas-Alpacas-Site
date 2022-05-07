@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "prestart": "node DBinitializer.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "poststart": "node DBinitializer.js"
   },
   "repository": {
     "type": "git",
