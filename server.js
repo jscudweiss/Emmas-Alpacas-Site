@@ -12,7 +12,7 @@ app.use('/fullcalendar',express.static(__dirname + '/node_modules/fullcalendar')
 app.use(express.static(__dirname + "/public"));
 /*app.use(express.static(__dirname + "/public/photos"));*/
 
-//const uri='mongodb://localhost:27017/alpacaDB';
+// const uri='mongodb://localhost:27017/alpacaDB';
 const uri = process.env.MONGODB_URI;
 mongoose.connect(uri,
     {useNewUrlParser: true}, function () {
@@ -77,7 +77,6 @@ app.post("/save_contact", (req, res) => {
             phone_number: req.body.phone_number,
             message: req.body.message
         },
-        {runValidators : true},
         function (err, contact) {
             if (err) {
                 console.log(err["message"]);
