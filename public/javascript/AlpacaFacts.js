@@ -37,7 +37,7 @@ function loadFacts(data, filterVar) {
         $('#factTitle').text(factTitle);
         $('#factPic').attr('src', factUrl);
         console.log(window.innerWidth)
-        if(window.matchMedia('only screen and (min-device-width: 769px)')){
+        if(window.matchMedia('only screen and (min-device-width: 769px)') || window.matchMedia('(min-width: 769px)')){
             location.href = '#split';
         }
     })
