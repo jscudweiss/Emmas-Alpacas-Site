@@ -19,7 +19,6 @@ mongoose.connect(uri,
         console.log("alpacaDB connection successful");
     });
 
-
 // =============================================================
 // page: name, info, extra info
 const pageSchema = new Schema({
@@ -89,7 +88,7 @@ app.post("/save_contact", (req, res) => {
                     "&message="+req.body.message);
             } else {
                 console.log("contact saved to database");
-                res.get("/ThankYou");
+                res.redirect("/ThankYou.html");
             }
         }
     );
@@ -120,7 +119,7 @@ app.post("/save_newsletter", (req, res) => {
             return console.error(err);
         } else {
             console.log("newsletter saved to database");
-            res.get("/ThankYou");
+            res.redirect("/ThankYou.html");
         }
     });
 })
