@@ -89,7 +89,7 @@ app.post("/save_contact", (req, res) => {
                     "&message="+req.body.message);
             } else {
                 console.log("contact saved to database");
-                res.redirect("/ThankYou.html");
+                res.get("/ThankYou");
             }
         }
     );
@@ -120,7 +120,7 @@ app.post("/save_newsletter", (req, res) => {
             return console.error(err);
         } else {
             console.log("newsletter saved to database");
-            res.redirect("/ThankYou.html");
+            res.get("/ThankYou");
         }
     });
 })
